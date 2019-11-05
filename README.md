@@ -10,7 +10,7 @@ A place to keep track of my favorite configuration of [Prettier](https://prettie
 
 ## Setup Prettier
 
-### Install Prettier as dev dependency:
+### 1. Install Prettier as dev dependency:
 
 ```bash
 npm install --save-dev --save-exact prettier
@@ -18,11 +18,11 @@ npm install --save-dev --save-exact prettier
 
 > "We recommend pinning an exact version of prettier in your package.json as we introduce stylistic changes in patch releases."
 
-### Add .prettierrc file:
+### 2. Add .prettierrc file:
 
 Reference JSON settings in [.prettierrc](./.prettierrc)
 
-### Add npm script to run Prettier on entire project:
+### 3. Add npm script to run Prettier on entire project:
 
 Under "Scripts" in package.json, add:
 
@@ -34,13 +34,13 @@ Under "Scripts" in package.json, add:
 
 ## Itegrate with TSLint
 
-### Install tslint-plugin-prettier and tslint-config-prettier as dev dependencies:
+### 1. Install tslint-plugin-prettier and tslint-config-prettier as dev dependencies:
 
 ```bash
 npm install --save-dev tslint-config-prettier tslint-plugin-prettier
 ```
 
-### In tslint.json, add:
+### 2. In tslint.json, add:
 
 ```json
 {
@@ -53,7 +53,20 @@ npm install --save-dev tslint-config-prettier tslint-plugin-prettier
 
 > **tslint-config-prettier** is a config that disables rules that conflict with Prettier. Make sure to put it **last** in the rulesDirectory array, so it gets the chance to override other configs.
 
-### Add npm script to run TSLint --fix on entire project:
+Also, update ordered-imports:
+
+```json
+  "ordered-imports": [
+    true,
+    {
+      "grouped-imports": true
+    }
+  ],
+```
+
+See reference to full [tslint.json](./tslint.json)
+
+### 3. Add npm script to run TSLint --fix on entire project:
 
 Under "Scripts" in package.json, add:
 
@@ -66,13 +79,13 @@ Under "Scripts" in package.json, add:
 
 > "Make sure Prettier is installed and is in your devDependencies before you proceed."
 
-### Install husky and lint-staged as dev dependencies:
+### 1. Install husky and lint-staged as dev dependencies:
 
 ```bash
 npm install --save-dev husky lint-staged
 ```
 
-### In package.json add:
+### 2. In package.json add:
 
 ```json
   "husky": {
