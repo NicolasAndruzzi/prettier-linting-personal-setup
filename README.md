@@ -7,6 +7,7 @@ A place to keep track of my favorite configuration of [Prettier](https://prettie
 - [Setup Prettier](#SetupPrettier)
 - [Itegrate with TSLint](#ItegratewithTSLint)
 - [Create Pre-Commit Hook](#CreatePre-CommitHook)
+- [Future Possibilities](#FuturePossibilities)
 
 ## Setup Prettier
 
@@ -105,6 +106,15 @@ npm install --save-dev husky lint-staged
     ]
   }
 ```
+
+## Future Possibilities
+
+**TSLint is now officially deprecated**
+- Look into ESLint with TS support plugins?
+- In 2020, what will the Angular cli team use for it's default linting?
+
+**Stylelint**
+- Is it worth implementing Stylelint being that Prettier supports it?
 
 ## License
 
